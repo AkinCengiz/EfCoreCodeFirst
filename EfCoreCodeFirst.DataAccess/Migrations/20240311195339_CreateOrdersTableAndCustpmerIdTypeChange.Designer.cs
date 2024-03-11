@@ -4,6 +4,7 @@ using EfCoreCodeFirst.DataAccess.Concrete.EntityFramework.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EfCoreCodeFirst.DataAccess.Migrations
 {
     [DbContext(typeof(EfCoreCodeFirstContext))]
-    partial class EfCoreCodeFirstContextModelSnapshot : ModelSnapshot
+    [Migration("20240311195339_CreateOrdersTableAndCustpmerIdTypeChange")]
+    partial class CreateOrdersTableAndCustpmerIdTypeChange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
